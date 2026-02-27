@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age & Gender Detection</title>
+</head>
+<body style="text-align:center; font-family: Arial;">
+
+    <h2>Upload Image</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if image %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ image }}" width="300">
+    {% endif %}
+
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+
+</body>
+</html>
